@@ -20,6 +20,7 @@ const CourseTabsNavigation = ({
         <div className="nav-bar">
           <div className="nav-menu">
             
+            
           <Tabs
             className="nav-underline-tabs"
             aria-label={intl.formatMessage(messages.courseMaterial)}
