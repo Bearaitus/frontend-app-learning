@@ -58,7 +58,7 @@ const CurrentGradeTooltip = ({ intl, tooltipClassName }) => {
         y="20px"
         style={{ transform: `translateX(${currentGradeDirection}3.4em)` }}
       >
-        Your current grade
+        Ваша текущая оценка
       </text>
     </>
   );

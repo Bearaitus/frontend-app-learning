@@ -43,7 +43,7 @@ const PassingGradeTooltip = ({ intl, passingGrade, tooltipClassName }) => {
         y="90px"
         style={{ transform: `translateX(${passingGradeDirection}3.4em)` }}
       >
-        Passing grade
+        Проходной балл
       </text>
     </>
   );

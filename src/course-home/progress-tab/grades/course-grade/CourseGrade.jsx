@@ -36,10 +36,10 @@ const CourseGrade = ({ intl }) => {
         <div className="row w-100 m-0 p-4">
           <div className="col-12 col-sm-6 p-0 pr-sm-5.5">
             <h2>
-              Grades
+              Оценки
             </h2>
             <p className="small">
-              This represents your weighted grade against the grade needed to pass this course.
+              Это представляет собой взвешенную оценку по сравнению с оценкой, необходимой для прохождения этого курса.
             </p>
           </div>
           <GradeBar passingGrade={passingGrade} />
