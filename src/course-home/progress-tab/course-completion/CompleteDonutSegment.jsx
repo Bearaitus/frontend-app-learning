@@ -35,7 +35,7 @@ const CompleteDonutSegment = ({ completePercentage, intl, lockedPercentage }) =>
         overlay={(
           <Popover id="complete-content-tooltip-popover" aria-hidden="true">
             <Popover.Content>
-                Content that you have completed.
+              Контент, который вы завершили.
             </Popover.Content>
           </Popover>
         )}
