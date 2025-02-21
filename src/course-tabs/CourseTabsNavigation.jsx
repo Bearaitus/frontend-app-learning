@@ -19,7 +19,7 @@ const CourseTabsNavigation = ({
       <div className="container-xl">
         <div className="nav-bar">
           <div className="nav-menu">
-            
+             
             
           <Tabs
             className="nav-underline-tabs"
