@@ -65,7 +65,7 @@ const UnitNavigation = ({
         </UnitNavigationEffortEstimate>
         <FontAwesomeIcon icon={nextArrow} className="ml-2" size="sm" />
       </Button>
-    );
+    ); 
   };
 
   return (
