@@ -73,7 +73,7 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
         )}
         {wideScreen && (
           <span className="h4 m-0 align-bottom">
-            A weighted grade of 80% is required to pass in this course
+            Для прохождения этого курса необходима взвешенная оценка 80%.
             {hasLetterGrades && (
               <span style={{ whiteSpace: 'nowrap' }}>
                 &nbsp;
