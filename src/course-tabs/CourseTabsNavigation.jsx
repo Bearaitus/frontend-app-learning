@@ -38,8 +38,11 @@ const CourseTabsNavigation = ({
                     ? `https://apps.pt.edtechlab.local/gradebook/${courseId}`
                     : url;
 
-                // Если slug === 'instructor', меняем название на "Gradebook"
-                const displayTitle = slug === 'instructor' ? 'Журнал оценок' : title;
+                // Заменяем title, если он равен "Course" или "Progress"
+                const modifiedTitle = title === 'Course' ? 'Курс' : title === 'Progress' ? 'Прогресс' : title;
+
+                // Если slug === 'instructor', меняем название на "Журнал оценок"
+                const displayTitle = slug === 'instructor' ? 'Журнал оценок' : modifiedTitle;
 
                 return (
                   <a
@@ -51,6 +54,7 @@ const CourseTabsNavigation = ({
                   </a>
                 );
               })}
+
           </Tabs>
 
           </div>
