@@ -28,36 +28,37 @@ const EffortEstimate = (props) => {
   const activities = intl.formatMessage(messages.activities, { activityCount: effortActivities });
   let content = null;
 
-  if (effortTime && effortActivities) {
-    let activitiesText;
-    if (effortActivities == 1) {
-      activitiesText  = "1 case";
-    } else {
-      activitiesText  = `${effortActivities} cases`;
-    }
-    content = (
-      <FormattedMessage
-        id="learning.effortEstimation.combinedEstimate"
-        defaultMessage=""
-        description="You can likely leave this alone, unless you want to use a full width plus or similar change"
-        values={{ activitiesText, minutes }}
-      />
-    );
-  } else if (effortTime) {
-    content = minutes;
-  } else if (effortActivities) {
-    content = activities;
-  } else {
-    return null;
-  }
+  // if (effortTime && effortActivities) {
+  //   let activitiesText;
+  //   if (effortActivities == 1) {
+  //     activitiesText  = "1 case";
+  //   } else {
+  //     activitiesText  = `${effortActivities} cases`;
+  //   }
+  //   content = (
+  //     <FormattedMessage
+  //       id="learning.effortEstimation.combinedEstimate"
+  //       defaultMessage="{minutes} + {activitiesText}"
+  //       description="You can likely leave this alone, unless you want to use a full width plus or similar change"
+  //       values={{ activitiesText, minutes }}
+  //     />
+  //   );
+  // } else if (effortTime) {
+  //   content = minutes;
+  // } else if (effortActivities) {
+  //   content = activities;
+  // } else {
+  //   return null;
+  // }
 
   return (
-    <span
-      className={classNames('text-gray-500 text-monospace', className)}
-      style={{ fontSize: '0.8em' }}
-    >
-      {content}
-    </span>
+    null
+    // <span
+    //   className={classNames('text-gray-500 text-monospace', className)}
+    //   style={{ fontSize: '0.8em' }}
+    // >
+    //   {content}
+    // </span>
   );
 };
 
