@@ -22,7 +22,7 @@ const EffortEstimate = (props) => {
   const minutesFull = intl.formatMessage(messages.minutesFull, { minuteCount });
   const minutes = (
     <>
-      <span>training pages</span>
+      <span></span>
     </>
   );
   const activities = intl.formatMessage(messages.activities, { activityCount: effortActivities });
@@ -38,7 +38,7 @@ const EffortEstimate = (props) => {
     content = (
       <FormattedMessage
         id="learning.effortEstimation.combinedEstimate"
-        defaultMessage="{minutes} + {activitiesText}"
+        defaultMessage=""
         description="You can likely leave this alone, unless you want to use a full width plus or similar change"
         values={{ activitiesText, minutes }}
       />
