@@ -27,10 +27,10 @@ const ProgressHeader = ({ intl }) => {
 
   return (
     <div className="row w-100 m-0 mt-3 mb-4 justify-content-between">
-      <h1>Ваш прогресс</h1>
+      <h1>Общий процент прохождения курса</h1>
       {administrator && studioUrl && (
       <Button variant="outline-primary" size="sm" className="align-self-center" href={studioUrl}>
-        Посмотреть оценку в Studio
+        Посмотреть оценку
       </Button>
       )}
     </div>
