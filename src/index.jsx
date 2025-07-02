@@ -162,7 +162,7 @@ initialize({
         SEARCH_CATALOG_URL: process.env.SEARCH_CATALOG_URL || null,
         SOCIAL_UTM_MILESTONE_CAMPAIGN: process.env.SOCIAL_UTM_MILESTONE_CAMPAIGN || null,
         STUDIO_BASE_URL: process.env.STUDIO_BASE_URL || null,
-        SUPPORT_URL: process.env.SUPPORT_URL || null,
+        SUPPORT_URL: "mailto://",
         SUPPORT_URL_CALCULATOR_MATH: process.env.SUPPORT_URL_CALCULATOR_MATH || null,
         SUPPORT_URL_ID_VERIFICATION: process.env.SUPPORT_URL_ID_VERIFICATION || null,
         SUPPORT_URL_VERIFIED_CERTIFICATE: process.env.SUPPORT_URL_VERIFIED_CERTIFICATE || null,
