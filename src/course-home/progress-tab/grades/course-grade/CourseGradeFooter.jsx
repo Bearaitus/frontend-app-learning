@@ -73,7 +73,7 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
         )}
         {wideScreen && (
           <span className="h4 m-0 align-bottom">
-            Для прохождения этого курса необходима взвешенная оценка {passingGrade}%.
+            Для успешного завершения этого курса необходима взвешенная оценка {passingGrade}%.
             {hasLetterGrades && (
               <span style={{ whiteSpace: 'nowrap' }}>
                 &nbsp;
