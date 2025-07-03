@@ -39,7 +39,7 @@ const CourseTabsNavigation = ({
                     : url;
 
                 // Заменяем title, если он равен "Course" или "Progress"
-                const modifiedTitle = title === 'Course' ? 'Курс' : title === 'Progress' ? 'Прогресс' : title;
+                const modifiedTitle = title === 'Course' ? 'Курс' : title === 'Progress' ? 'Мой прогресс' : title;
 
                 // Если slug === 'instructor', меняем название на "Журнал оценок"
                 const displayTitle = slug === 'instructor' ? 'Журнал оценок' : modifiedTitle;
