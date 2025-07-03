@@ -21,8 +21,9 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="row w-100 m-0 align-items-center">
-      <h3 className="h4 mb-3 mr-1">Отчёт о прогрессе</h3>
+    <>
+      <div className="row w-100 m-0 align-items-center">
+      <h2>Детали прогресса</h2>
       
       {!gradesFeatureIsFullyLocked && allOfSomeAssignmentTypeIsLocked && (
         <div className="mb-3 small ml-0 d-inline">
@@ -31,6 +32,12 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
         </div>
       )}
     </div>
+      <div>
+      <p>
+        В данной таблице описано, как распредяется ваш прогресс в течение курса.
+      </p>
+    </div>
+    </>
   );
 };
 

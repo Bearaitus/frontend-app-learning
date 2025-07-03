@@ -26,13 +26,16 @@ const GradeSummaryTableFooter = ({ intl }) => {
 
   const isLocaleRtl = isRtl(getLocale());
 
+  // return (
+  //   <DataTable.TableFooter className="buttom-futter-of-grade">
+  //     <div className="row w-100 m-0">
+  //       <div id="weighted-grade-summary" className="col-8 p-0 small">Ваш процент прохождения курса</div>
+  //       <div data-testid="gradeSummaryFooterTotalWeightedGrade" aria-labelledby="weighted-grade-summary" className="col-4 p-0 text-right font-weight-bold small">{totalGrade}{isLocaleRtl && '\u200f'}%</div>
+  //     </div>
+  //   </DataTable.TableFooter>
+  // );
   return (
-    <DataTable.TableFooter className="buttom-futter-of-grade">
-      <div className="row w-100 m-0">
-        <div id="weighted-grade-summary" className="col-8 p-0 small">Сводка вашей текущей взвешенной оценки</div>
-        <div data-testid="gradeSummaryFooterTotalWeightedGrade" aria-labelledby="weighted-grade-summary" className="col-4 p-0 text-right font-weight-bold small">{totalGrade}{isLocaleRtl && '\u200f'}%</div>
-      </div>
-    </DataTable.TableFooter>
+    null
   );
 };
 
