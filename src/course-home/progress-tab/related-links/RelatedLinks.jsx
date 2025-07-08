@@ -35,22 +35,22 @@ const RelatedLinks = ({ intl }) => {
 
   return (
     <section className="mb-4 x-small">
-      <h3 className="h4">{intl.formatMessage(messages.relatedLinks)}</h3>
+      <h3 className="h4">{messages.relatedLinks.defaultMessage}</h3>
       <ul className="pl-4">
         {datesTabUrl && (
         <li>
           <Hyperlink destination={datesTabUrl} onClick={() => logLinkClicked('dates')}>
-            {intl.formatMessage(messages.datesCardLink)}
+            {messages.datesCardLink.defaultMessage}
           </Hyperlink>
-          <p>{intl.formatMessage(messages.datesCardDescription)}</p>
+          <p>{messages.datesCardDescription.defaultMessage}</p>
         </li>
         )}
         {overviewTabUrl && (
         <li>
           <Hyperlink destination={overviewTabUrl} onClick={() => logLinkClicked('course_outline')}>
-            {intl.formatMessage(messages.outlineCardLink)}
+            {messages.outlineCardLink.defaultMessage}
           </Hyperlink>
-          <p>{intl.formatMessage(messages.outlineCardDescription)}</p>
+          <p>{messages.outlineCardDescription.defaultMessage}</p>
         </li>
         )}
       </ul>

@@ -3,28 +3,28 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   loading: {
     id: 'courseOutline.loading',
-    defaultMessage: 'Loading...',
-    description: 'Screen reader text to use on the spinner while the sidebar is loading.',
+    defaultMessage: 'Загрузка...',
+    description: 'Текст для программы чтения с экрана, используемый на спиннере во время загрузки боковой панели.',
   },
   toggleCourseOutlineTrigger: {
     id: 'courseOutline.toggle.button',
-    defaultMessage: 'Toggle course outline tray',
-    description: 'Button for the learner to toggle the sidebar',
+    defaultMessage: 'Переключить панель курса',
+    description: 'Кнопка для учащегося, чтобы переключить боковую панель',
   },
   courseOutlineTitle: {
     id: 'courseOutline.tray.title',
-    defaultMessage: 'Course Outline',
-    description: 'Title text displayed for the course outline tray',
+    defaultMessage: 'План курса',
+    description: 'Текст заголовка, отображаемый для панели плана курса',
   },
   completedUnit: {
     id: 'courseOutline.completedUnit',
-    defaultMessage: 'Completed unit',
-    description: 'Text used to describe the green checkmark icon in front of a unit title',
+    defaultMessage: 'Завершенный модуль',
+    description: 'Текст, используемый для описания зеленой галочки перед названием единицы',
   },
   incompleteUnit: {
     id: 'courseOutline.incompleteUnit',
-    defaultMessage: 'Incomplete unit',
-    description: 'Text used to describe the gray checkmark icon in front of a unit title',
+    defaultMessage: 'Незавершенный модуль',
+    description: 'Текст, используемый для описания серой галочки перед названием единицы',
   },
 });
 

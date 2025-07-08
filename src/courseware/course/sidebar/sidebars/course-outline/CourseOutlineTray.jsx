@@ -75,11 +75,11 @@ const CourseOutlineTray = ({ intl }) => {
         </Button>
       ) : (
         <span className="outline-sidebar-heading mb-0 h4 text-dark-500">
-          {intl.formatMessage(messages.courseOutlineTitle)}
+          {messages.courseOutlineTitle.defaultMessage}
         </span>
       )}
       <IconButton
-        alt={intl.formatMessage(messages.toggleCourseOutlineTrigger)}
+        alt={messages.toggleCourseOutlineTrigger.defaultMessage}
         className="outline-sidebar-toggle-btn flex-shrink-0 text-dark bg-light-200"
         iconAs={MenuOpenIcon}
         onClick={handleToggleCollapse}
@@ -107,7 +107,7 @@ const CourseOutlineTray = ({ intl }) => {
         <section className="outline-sidebar w-100">
           {sidebarHeading}
           <PageLoading
-            srMessage={intl.formatMessage(messages.loading)}
+            srMessage={messages.loading.defaultMessage}
           />
         </section>
       </div>

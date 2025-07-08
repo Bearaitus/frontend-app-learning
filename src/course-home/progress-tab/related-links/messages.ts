@@ -3,28 +3,28 @@ import { defineMessages } from '@edx/frontend-platform/i18n';
 const messages = defineMessages({
   datesCardDescription: {
     id: 'progress.relatedLinks.datesCard.description',
-    defaultMessage: 'A schedule view of your course due dates and upcoming assignments.',
-    description: 'It explain the content of the dates tab',
+    defaultMessage: 'График вашего курса с сроками сдачи заданий и предстоящими заданиями.',
+    description: 'Описание содержимого вкладки с датами',
   },
   datesCardLink: {
     id: 'progress.relatedLinks.datesCard.link',
-    defaultMessage: 'Dates',
-    description: 'Anchor text for link that redirects to dates tab',
+    defaultMessage: 'Даты',
+    description: 'Текст ссылки, перенаправляющей на вкладку с датами',
   },
   outlineCardDescription: {
     id: 'progress.relatedLinks.outlineCard.description',
-    defaultMessage: 'A birds-eye view of your course content.',
-    description: 'It explain the content of the course outline tab',
+    defaultMessage: 'Обзор содержимого вашего курса.',
+    description: 'Описание содержимого вкладки плана курса',
   },
   outlineCardLink: {
     id: 'progress.relatedLinks.outlineCard.link',
-    defaultMessage: 'Course Outline',
-    description: 'Anchor text for link that redirects to course outline tab',
+    defaultMessage: 'План курса',
+    description: 'Текст ссылки, перенаправляющей на вкладку плана курса',
   },
   relatedLinks: {
     id: 'progress.relatedLinks',
-    defaultMessage: 'Related links',
-    description: 'Headline for (related links) section in progress tab',
+    defaultMessage: 'Связанные ссылки',
+    description: 'Заголовок раздела (связанные ссылки) во вкладке прогресса',
   },
 });
 
