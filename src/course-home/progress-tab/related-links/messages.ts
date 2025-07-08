@@ -18,7 +18,7 @@ const messages = defineMessages({
   },
   outlineCardLink: {
     id: 'progress.relatedLinks.outlineCard.link',
-    defaultMessage: 'План курса',
+    defaultMessage: 'Оглавление курса',
     description: 'Текст ссылки, перенаправляющей на вкладку плана курса',
   },
   relatedLinks: {

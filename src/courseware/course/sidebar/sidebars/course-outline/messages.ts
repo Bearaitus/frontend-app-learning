@@ -13,7 +13,7 @@ const messages = defineMessages({
   },
   courseOutlineTitle: {
     id: 'courseOutline.tray.title',
-    defaultMessage: 'План курса',
+    defaultMessage: 'Оглавление курса',
     description: 'Текст заголовка, отображаемый для панели плана курса',
   },
   completedUnit: {
