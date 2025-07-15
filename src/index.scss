@@ -35,7 +35,6 @@
 
   footer {
     flex: 0;
-    background-color: #fff;
   }
 }
 
@@ -478,6 +477,10 @@
 
 .custom-class-body-size {
   min-height: 80% !important;
+}
+
+footer {
+  background-color: #ffffff;
 }
 
 // Import component-specific sass files
