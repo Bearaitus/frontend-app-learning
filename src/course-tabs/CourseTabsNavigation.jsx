@@ -42,7 +42,7 @@ const CourseTabsNavigation = ({
                     className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
                     href={newUrl}
                   >
-                    Progress
+                    Course
                   </a>
                 );
               })}
