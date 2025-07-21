@@ -28,21 +28,13 @@ const CourseTabsNavigation = ({
             {tabs
               .filter(({ slug }) => slug !== 'dates')
               .map(({ url, title, slug }) => {
-                // Извлекаем идентификатор курса из текущего URL
                 const match = window.location.pathname.match(/course-v1:[^/]+/);
                 const courseId = match ? match[0] : '';
 
-                // Формируем новый URL для instructor
                 const newUrl =
                   slug === 'instructor'
                     ? `https://apps.pt.edtechlab.local/gradebook/${courseId}`
                     : url;
-
-                // Заменяем title, если он равен "Course" или "Progress"
-                const modifiedTitle = title === 'Course' ? 'Курс' : title === 'Progress' ? 'Мой прогресс' : title;
-
-                // Если slug === 'instructor', меняем название на "Журнал оценок"
-                const displayTitle = slug === 'instructor' ? 'Журнал оценок' : modifiedTitle;
 
                 return (
                   <a
@@ -50,7 +42,7 @@ const CourseTabsNavigation = ({
                     className={classNames('nav-item flex-shrink-0 nav-link', { active: slug === activeTabSlug })}
                     href={newUrl}
                   >
-                    {displayTitle}
+                    Progress
                   </a>
                 );
               })}

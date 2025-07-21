@@ -1,20 +1,16 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import { CheckCircle, WarningFilled } from '@openedx/paragon/icons';
 import { breakpoints, Icon, useWindowSize } from '@openedx/paragon';
 import { useModel } from '../../../../generic/model-store';
-
 import GradeRangeTooltip from './GradeRangeTooltip';
 import messages from '../messages';
-
 const CourseGradeFooter = ({ intl, passingGrade }) => {
   const {
     courseId,
   } = useSelector(state => state.courseHome);
-
   const {
     courseGrade: {
       isPassing,
@@ -24,12 +20,9 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
       gradeRange,
     },
   } = useModel('progress', courseId);
-
   const wideScreen = useWindowSize().width >= breakpoints.medium.minWidth;
-
   const hasLetterGrades = Object.keys(gradeRange).length > 1; // A pass/fail course will only have one key
   let footerText = intl.formatMessage(messages.courseGradeFooterNonPassing, { passingGrade });
-
   if (isPassing) {
     if (hasLetterGrades) {
       const minGradeRangeCutoff = gradeRange[letterGrade] * 100;
@@ -38,7 +31,6 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
       )];
       const maxGradeRangeCutoff = possibleMaxGradeRangeValues.length ? Math.min(...possibleMaxGradeRangeValues) * 100
         : 100;
-
       footerText = intl.formatMessage(messages.courseGradeFooterPassingWithGrade, {
         letterGrade,
         minGrade: minGradeRangeCutoff.toFixed(0),
@@ -48,10 +40,8 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
       footerText = intl.formatMessage(messages.courseGradeFooterGenericPassing);
     }
   }
-
   const icon = isPassing ? <Icon src={CheckCircle} className="text-success-300 d-inline-flex align-bottom" />
     : <Icon src={WarningFilled} className="d-inline-flex align-bottom" />;
-
   return (
     <div className={`row w-100 m-0 px-4 py-3 py-md-4 rounded-bottom ${isPassing}`}
     style={{ backgroundColor: '#BCCBDD' }}
@@ -73,7 +63,7 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
         )}
         {wideScreen && (
           <span className="h4 m-0 align-bottom">
-            Для успешного завершения курса необходимый прогресс должен быть {passingGrade}%
+            To successfully complete the course, the required progress must be {passingGrade}%
             {hasLetterGrades && (
               <span style={{ whiteSpace: 'nowrap' }}>
                 &nbsp;
@@ -86,10 +76,8 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
     </div>
   );
 };
-
 CourseGradeFooter.propTypes = {
   intl: intlShape.isRequired,
   passingGrade: PropTypes.number.isRequired,
 };
-
 export default injectIntl(CourseGradeFooter);

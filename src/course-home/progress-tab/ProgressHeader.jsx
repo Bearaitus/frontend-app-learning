@@ -27,7 +27,7 @@ const ProgressHeader = ({ intl }) => {
 
   return (
     <div className="row w-100 m-0 mt-3 mb-4 justify-content-between">
-      <h1>Общий процент прохождения курса</h1>
+      <h1>Overall Course Completion Rate</h1>
     </div>
   );
 };

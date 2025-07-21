@@ -1,24 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-
 import {
   getLocale, injectIntl, intlShape, isRtl,
 } from '@edx/frontend-platform/i18n';
 import { DataTable } from '@openedx/paragon';
 import { useModel } from '../../../../generic/model-store';
-
 import AssignmentTypeCell from './AssignmentTypeCell';
 import DroppableAssignmentFootnote from './DroppableAssignmentFootnote';
 import GradeSummaryTableFooter from './GradeSummaryTableFooter';
-
 import messages from '../messages';
-
 const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
   const {
     courseId,
   } = useSelector(state => state.courseHome);
-
   const {
     gradingPolicy: {
       assignmentPolicies,
@@ -26,14 +21,11 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
     gradesFeatureIsFullyLocked,
     sectionScores,
   } = useModel('progress', courseId);
-
   const footnotes = [];
-
   const getFootnoteId = (assignment) => {
     const footnoteId = assignment.shortLabel ? assignment.shortLabel : assignment.type;
     return footnoteId.replace(/[^A-Za-z0-9.-_]+/g, '-');
   };
-
   const hasNoAccessToAssignmentsOfType = (assignmentType) => {
     const subsectionAssignmentsOfType = sectionScores.map((chapter) => chapter.subsections.filter((subsection) => (
       subsection.assignmentType === assignmentType && subsection.hasGradedAssignment
@@ -50,11 +42,9 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
     }
     return false;
   };
-
   const gradeSummaryData = assignmentPolicies.map((assignment) => {
     let footnoteId = '';
     let footnoteMarker;
-
     if (assignment.numDroppable > 0) {
       footnoteId = getFootnoteId(assignment);
       footnotes.push({
@@ -62,14 +52,10 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
         numDroppable: assignment.numDroppable,
         assignmentType: assignment.type,
       });
-
       footnoteMarker = footnotes.length;
     }
-
     const locked = !gradesFeatureIsFullyLocked && hasNoAccessToAssignmentsOfType(assignment.type);
-
     const isLocaleRtl = isRtl(getLocale());
-
     return {
       type: {
         footnoteId, footnoteMarker, type: assignment.type, locked,
@@ -87,9 +73,7 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
       locked={value.locked} // eslint-disable-line react/prop-types
     />
   );
-
   const getCell = (locked, value) => <span className={locked ? 'greyed-out' : ''}>{value}</span>;
-
   return (
     <>
       <DataTable
@@ -97,27 +81,27 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
         itemCount={gradeSummaryData.length}
         columns={[
           {
-            Header: `Тип задания`,
+            Header: `Assignment Type`,
             accessor: 'type',
             Cell: ({ value }) => getAssignmentTypeCell(value),
             headerClassName: 'h5 mb-0',
           },
           {
-            Header: `Доля модуля в курсе`,
+            Header: `Module Weight in Course`,
             accessor: 'weight',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.weight),
             cellClassName: 'text-right small',
           },
           {
-            Header: `Модуль пройден на (%)`,
+            Header: `Module Progress (%)`,
             accessor: 'grade',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.grade),
             cellClassName: 'text-right small',
           },
           {
-            Header: `Доля прогресса в курсе`,
+            Header: `Progress Contribution`,
             accessor: 'weightedGrade',
             headerClassName: 'justify-content-end h5 mb-0 text-right',
             Cell: ({ value }) => getCell(value.locked, value.weightedGrade),
@@ -128,17 +112,14 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
         <DataTable.Table />
         <GradeSummaryTableFooter />
       </DataTable>
-
       {footnotes && (
         <DroppableAssignmentFootnote footnotes={footnotes} />
       )}
     </>
   );
 };
-
 GradeSummaryTable.propTypes = {
   intl: intlShape.isRequired,
   setAllOfSomeAssignmentTypeIsLocked: PropTypes.func.isRequired,
 };
-
 export default injectIntl(GradeSummaryTable);

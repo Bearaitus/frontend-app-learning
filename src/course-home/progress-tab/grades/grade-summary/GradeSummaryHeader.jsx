@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-
 import { injectIntl, intlShape } from '@edx/frontend-platform/i18n';
 import {
   Icon, IconButton, OverlayTrigger, Popover,
 } from '@openedx/paragon';
 import { Blocked, InfoOutline } from '@openedx/paragon/icons';
-
 import messages from '../messages';
 import { useModel } from '../../../../generic/model-store';
-
 const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
   const {
     courseId,
@@ -19,11 +16,10 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
     gradesFeatureIsFullyLocked,
   } = useModel('progress', courseId);
   const [showTooltip, setShowTooltip] = useState(false);
-
   return (
     <>
       <div className="row w-100 m-0 align-items-center">
-      <h2>Детали прогресса</h2>
+      <h2>Progress Details</h2>
       
       {!gradesFeatureIsFullyLocked && allOfSomeAssignmentTypeIsLocked && (
         <div className="mb-3 small ml-0 d-inline">
@@ -34,16 +30,14 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
     </div>
       <div>
       <p className="small">
-        В данной таблице описано распредение вашего прогресса в течение курса
+        This table describes the distribution of your progress throughout the course
       </p>
     </div>
     </>
   );
 };
-
 GradeSummaryHeader.propTypes = {
   intl: intlShape.isRequired,
   allOfSomeAssignmentTypeIsLocked: PropTypes.bool.isRequired,
 };
-
 export default injectIntl(GradeSummaryHeader);

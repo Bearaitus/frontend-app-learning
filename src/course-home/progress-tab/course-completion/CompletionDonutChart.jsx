@@ -42,7 +42,7 @@ const CompletionDonutChart = ({ intl }) => {
             {completePercentage}{isLocaleRtl && '\u200f'}%
           </text>
           <text x="50%" y="50%" className="donut-chart-label">
-            Пройдено
+            Passed
           </text>
         </g>
         <IncompleteDonutSegment incompletePercentage={incompletePercentage} />

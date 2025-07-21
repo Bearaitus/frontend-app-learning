@@ -48,7 +48,7 @@ const DetailedGrades = ({ intl }) => {
       onClick={logOutlineLinkClick}
       tabIndex={gradesFeatureIsFullyLocked ? '-1' : '0'}
     >
-      Содержание курса
+      Course Content
     </Hyperlink>
   );
 

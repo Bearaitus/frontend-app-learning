@@ -41,14 +41,14 @@ const UnitNavigation = ({
         to={disabled ? undefined : previousLink}
       >
         <FontAwesomeIcon icon={prevArrow} className="mr-2" size="sm" />
-          Назад
+          Back
       </Button>
     );
   };
 
   const renderNextButton = () => {
     const { exitActive, exitText } = GetCourseExitNavigation(courseId, intl);
-    const buttonText = (isLastUnit && exitText) ? exitText : "Дальше";
+    const buttonText = (isLastUnit && exitText) ? exitText : "Next";
     const disabled = isLastUnit && !exitActive;
     const nextArrow = isRtl(getLocale()) ? faChevronLeft : faChevronRight;
     return (
