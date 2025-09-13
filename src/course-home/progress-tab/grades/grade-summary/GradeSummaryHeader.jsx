@@ -34,7 +34,7 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
     </div>
       <div>
       <p className="small">
-        В данной таблице описано распредение вашего прогресса в течение курса
+        Здесь показано, как распределяется ваш прогресс по практическим кейсам в течение курса
       </p>
     </div>
     </>
