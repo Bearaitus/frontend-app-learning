@@ -30,7 +30,7 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
     </div>
       <div>
       <p className="small">
-        This table describes the distribution of your progress throughout the course
+        This shows how your progress on practical cases is distributed throughout the course
       </p>
     </div>
     </>
