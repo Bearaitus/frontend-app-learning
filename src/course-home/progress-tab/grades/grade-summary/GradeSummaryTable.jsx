@@ -97,20 +97,20 @@ const GradeSummaryTable = ({ intl, setAllOfSomeAssignmentTypeIsLocked }) => {
         itemCount={gradeSummaryData.length}
         columns={[
           {
-            Header: `Тип задания`,
+            Header: `Тип кейса`,
             accessor: 'type',
             Cell: ({ value }) => getAssignmentTypeCell(value),
             headerClassName: 'h5 mb-0',
           },
           {
-            Header: `Доля модуля в курсе`,
+            Header: `Доля части в курсе (%)`,
             accessor: 'weight',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.weight),
             cellClassName: 'text-right small',
           },
           {
-            Header: `Модуль пройден на (%)`,
+            Header: `Часть пройдена на (%)`,
             accessor: 'grade',
             headerClassName: 'justify-content-end h5 mb-0',
             Cell: ({ value }) => getCell(value.locked, value.grade),
