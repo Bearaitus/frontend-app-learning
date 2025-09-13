@@ -8,7 +8,7 @@ const CourseCompletion = ({ intl }) => (
       <div className="col-12 col-sm-6 col-md-7 p-0">
         <h2>Your Learning Journey</h2>
         <p className="small">
-          Here you can see how far you’ve come in your learning journey. Each step you complete contributes to your growth. Keep exploring the materials, completing assignments, and reinforcing your knowledge — you’ve already made great progress!
+          This shows how far you have progressed in the course. Every completed step contributes to your development. Continue studying the theoretical materials and completing practical cases — you have already accomplished a lot!
         </p>
       </div>
       <div className="col-12 col-sm-6 col-md-5 mt-sm-n3 p-0 text-center">

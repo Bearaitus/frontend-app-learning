@@ -31,7 +31,7 @@ const CourseGrade = ({ intl }) => {
               How You're Doing
             </h2>
             <p className="small">
-              This is your current score. It shows how close you are to the passing grade. Each step you complete brings you closer to your goal. Keep up the good work and continue in the same spirit!
+              This shows how close you are to the passing score. Each completed case brings you closer to your goal. Track your practice progress and keep up the good work!
             </p>
           </div>
           <GradeBar passingGrade={passingGrade} />
