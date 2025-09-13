@@ -19,7 +19,7 @@ const GradeSummaryHeader = ({ intl, allOfSomeAssignmentTypeIsLocked }) => {
   return (
     <>
       <div className="row w-100 m-0 align-items-center">
-      <h2>Progress Details</h2>
+      <h2>Progress Details for Educational Cases</h2>
       
       {!gradesFeatureIsFullyLocked && allOfSomeAssignmentTypeIsLocked && (
         <div className="mb-3 small ml-0 d-inline">

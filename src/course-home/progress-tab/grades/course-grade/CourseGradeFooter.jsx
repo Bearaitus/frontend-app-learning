@@ -63,7 +63,7 @@ const CourseGradeFooter = ({ intl, passingGrade }) => {
         )}
         {wideScreen && (
           <span className="h4 m-0 align-bottom">
-            To successfully complete the course, the required progress must be {passingGrade}%
+            To successfully complete the course, the required progress on Educational Cases must be at least {passingGrade}%
             {hasLetterGrades && (
               <span style={{ whiteSpace: 'nowrap' }}>
                 &nbsp;
